@@ -1,0 +1,117 @@
+$nav-height: 60px;
+$content-title-height: 50px;
+$content-margin: 20vh;
+
+$clr-header: #EEEEEE;
+$clr-accent: #F22613;
+$clr-primary: #CF000F;
+$clr-default: #22313F;
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: $clr-header;
+    display: block;
+    height: $nav-height;
+    width: 100%;
+    position: fixed;
+
+
+
+    nav {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                padding: 0;
+                margin: 0;
+                width: calc(100% / 4);
+                display: inline-block;
+                float: left;
+                height: $nav-height;
+                line-height: $nav-height;
+                text-align: center;
+                position: relative;
+
+                &.active:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 10px;
+                    height: 2px;
+                    width: 50%;
+                    margin: 0 auto;
+                    background: red;
+                    left: 0;
+                    right: 0;
+                }
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.03);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.l-container {
+    position: relative;
+    .background {
+        z-index:-1;
+        position:fixed;
+        width:100vw;
+        height: 100vh;
+        margin:0;
+        padding:0;
+
+        .background-tint {
+            width:100vw;
+            height: 100vh;
+            z-index: -2;
+            animation: fadeinHeader 2s ease-in-out;
+            background-color: rgba(0,0,0,0.2);
+            position: absolute;
+            top: 0;
+        }
+
+        #map {
+            z-index:-3;
+            width:100vw;
+            height: 100vh;
+        }
+    }
+
+    .content-overlay {
+        position: relative;
+        top: $content-margin;
+        min-height: calc(100vh - (#{$nav-height}));
+
+        .content-title {
+            height: $content-title-height;
+            text-align: center;
+            line-height: $content-title-height;
+        }
+
+        .content {
+            padding-top: 20px;
+            min-height: calc(100vh - #{$content-margin} - #{$nav-height});
+            background-color: $clr-header;
+        }
+    }
+
+}
+
+/* Animations */
+@keyframes fadeinHeader {
+    from {background-color: rgba(0,0,0,0);}
+    to {background-color: rgba(0,0,0,0.2);}
+}
