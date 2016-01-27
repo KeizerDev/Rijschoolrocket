@@ -1,0 +1,105 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: url("../images/header.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-animation: fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1s;
+  /* Internet Explorer */
+  -o-animation: fadein 1s;
+  /* Opera < 12.1 */
+  animation: fadein 1s; }
+
+.l-content {
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  max-width: 960px;
+  margin: 0px auto; }
+
+.l-pages {
+  padding: 10px; }
+
+.l-loader {
+  width: 100%;
+  max-width: 300px;
+  margin: 0px auto; }
+
+.logo-card-image.mdl-card {
+  width: 100%;
+  max-width: 640px;
+  margin: 0px auto;
+  background-color: transparent;
+  min-height: 0;
+  padding: 10px; }
+
+.fade-in-content {
+  display: none;
+  margin: 20px 0; }
+
+.img-rounded {
+  border-radius: 100%;
+  display: inline;
+  width: 100%; }
+
+.workers {
+  width: 100%; }
+  .workers li {
+    width: calc(100%/8);
+    display: inline-block;
+    list-style: none;
+    margin: 10px; }
+    .workers li img {
+      border-radius: 100%;
+      width: 100%; }
+
+/* Animations */
+@keyframes fadeinHeader {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: rgba(0, 0, 0, 0.2); } }
+@keyframes menuHover {
+  0% {
+    height: 0px;
+    width: 10%; }
+  50% {
+    height: 2px;
+    width: 10%; }
+  100% {
+    height: 2px;
+    width: 70%; } }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */

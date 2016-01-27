@@ -3,5 +3,5 @@ Elements: http://keizerdev.github.io/Rijschoolrocket/elements.html
 
 Sass compile:   
 ```bash
-$ sass --watch sass/style.scss:css/style.css
+$ sass --watch web/sass/style.scss:web/css/style.css
 ```
